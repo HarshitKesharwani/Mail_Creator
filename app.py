@@ -10,7 +10,7 @@ load_dotenv()
 
 
 st.title("EMAIL GENERATOR")
-groq_api_key=st.text_input("Enter GROQ_API_KEY")
+groq_api_key=st.sidebar.text_input("Enter GROQ_API_KEY")
 input=st.text_input("Enter you email content")
 tone = st.sidebar.selectbox(
     "Choose the tone of your email:",
@@ -43,6 +43,7 @@ if st.button("Get Email"):
         file_name="email.txt",
         mime="text/plain"
         )
+
 
 
 
